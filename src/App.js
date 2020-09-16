@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import Booking from './components/Place/Booking';
 import BookingCheckout from './components/BookingCheckout/BookingCheckout';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -38,10 +39,10 @@ function App(props) {
              <PlaceDetails></PlaceDetails>
            
           </Route>
-          <Route path="/checkout">
+          <PrivateRoute path="/checkout">
             <BookingCheckout></BookingCheckout>
 
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
           <Login></Login>
 
