@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Booking = () => {
 
@@ -16,7 +17,8 @@ const Booking = () => {
         <Form.Label>Destination</Form.Label>
         <Form.Control type="destination"  placeholder="Cox's Bazar" />
       </Form.Group>
-
+      <Link to="/checkout"><Button  variant="primary" type="submit">Start Booking</Button></Link>
+      
       </Form>
       </div>
      
