@@ -14,10 +14,10 @@ const Header = () => {
      
     </Form>
     <Nav className="mr-auto nav-header">
-      <Nav.Link href="#home">News</Nav.Link>
+      <Nav.Link href=""><Link to="/news">News</Link></Nav.Link>
       <Nav.Link href="/"><Link to="/destination">Destination</Link> </Nav.Link>
-      <Nav.Link href="#pricing">Blog</Nav.Link>
-      <Nav.Link href="#">Contact</Nav.Link>
+      <Nav.Link href=""><Link to="/blog">Blog</Link></Nav.Link>
+      <Nav.Link href=""><Link to="/contact">Contact</Link></Nav.Link>
       
       <Button style={{color: 'yellow'}}>Welcome to {loggedInUser.displayName}!!</Button>
       

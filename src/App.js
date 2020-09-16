@@ -11,9 +11,11 @@ import Home from './components/Home/Home';
 import PlaceDetails from './components/PlaceDetails/PlaceDetails';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
-import Booking from './components/Place/Booking';
 import BookingCheckout from './components/BookingCheckout/BookingCheckout';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Contact from './components/Others/Contact';
+import Blog from './components/Others/Blog';
+import News from './components/Others/News';
 
 export const UserContext = createContext();
 
@@ -43,6 +45,15 @@ function App(props) {
             <BookingCheckout></BookingCheckout>
 
           </PrivateRoute>
+          <Route path="/contact">
+            <Contact></Contact>
+          </Route>
+          <Route path="/blog">
+            <Blog></Blog>
+          </Route>
+          <Route path="/news">
+            <News></News>
+          </Route>
           <Route path="/login">
           <Login></Login>
 
