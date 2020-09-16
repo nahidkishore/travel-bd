@@ -11,6 +11,7 @@ import Home from './components/Home/Home';
 import PlaceDetails from './components/PlaceDetails/PlaceDetails';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
+import Booking from './components/Place/Booking';
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
           <Home></Home>
           </Route>
           <Route path="/booking/:placeId">
-            <PlaceDetails></PlaceDetails>
+             <PlaceDetails></PlaceDetails>
+           
 
           </Route>
           <Route path="/login">
