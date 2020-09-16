@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import './Header.css';
 const Header = () => {
+  const [loggedInUser, setLoggedInUser]=useContext(UserContext);
   return (
     <div>
       <Navbar bg="dark" variant="dark">
@@ -16,8 +18,12 @@ const Header = () => {
       <Nav.Link href="/"><Link to="/destination">Destination</Link> </Nav.Link>
       <Nav.Link href="#pricing">Blog</Nav.Link>
       <Nav.Link href="#">Contact</Nav.Link>
+      
+      <Button style={{color: 'yellow'}}>Welcome to {loggedInUser.displayName}!!</Button>
+      
     </Nav>
     <Link to="/login"><Button>Login</Button></Link>
+    <Button onClick={()=> setLoggedInUser({})} variant="warning">Sign Out</Button>
     
   
   </Navbar>
