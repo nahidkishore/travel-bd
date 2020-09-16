@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Header.css';
 const Header = () => {
   return (
@@ -16,7 +17,8 @@ const Header = () => {
       <Nav.Link href="#pricing">Blog</Nav.Link>
       <Nav.Link href="#">Contact</Nav.Link>
     </Nav>
-    <Button>Login</Button>
+    <Link to="/login"><Button>Login</Button></Link>
+    
   
   </Navbar>
     </div>

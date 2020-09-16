@@ -1,9 +1,9 @@
 const fakeData=[
   {
     id:1,
-    title:"COX'S BAZAR",
-    description:"Cox's bazar is world Largest sea beach",
-    imageUrl:'https://iili.io/2nUyQ4.png',
+    title:"Sajek",
+    description:"sajek is most beautiful place",
+    imageUrl:'https://iili.io/2ni7Lb.png',
     price:119
 
   },
