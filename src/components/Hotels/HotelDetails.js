@@ -17,7 +17,7 @@ const HotelDetails = (props) => {
         <Card.Img></Card.Img>
         <Card.Body>
   <Card.Title>{hotelName}</Card.Title>
-  <Card.Text>{guests} {bedrooms} {bed} {bath} <br/>
+  <Card.Text>{guests} guests {bedrooms} bedrooms {bed} bed {bath} bath <br/>
   {facilities} <br/> {cancellation} <br/>
   <p>{rating}(10) ${price}/night</p> 
   </Card.Text>

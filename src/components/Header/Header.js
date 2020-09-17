@@ -29,11 +29,11 @@ const Header = () => {
      
     </Form>
     <Nav className="mr-auto nav-header">
-      <Nav.Link href="" style={{ fontWeight: "0",fontSize: "32px" }}><Link to="/news">News</Link></Nav.Link>
+      <Nav.Link href="" style={{ fontWeight: "0",fontSize: "25px" }}><Link to="/news">News</Link></Nav.Link>
       {/* <Nav.Link href="/"><Link to="/destination">Destination</Link> </Nav.Link> */}
-      <Nav.Link href="" style={{ fontWeight: "0",fontSize: "32px" }}><Link to="/blog">Blog</Link></Nav.Link>
+      <Nav.Link href="" style={{ fontWeight: "0",fontSize: "25px" }}><Link to="/blog">Blog</Link></Nav.Link>
 
-      <Nav.Link href="" style={{ fontWeight: "0",fontSize: "32px" }}><Link to="/contact">Contact</Link></Nav.Link>
+      <Nav.Link href="" style={{ fontWeight: "0",fontSize: "25px" }}><Link to="/contact">Contact</Link></Nav.Link>
 
       
       <Nav.Link href=""><p style={{color: 'yellow', weight: 'normal'}}> {loggedInUser.displayName}</p></Nav.Link>
@@ -41,7 +41,7 @@ const Header = () => {
       
     </Nav>
     {/* <Link to="/login"><Button>Login</Button></Link> */}
-    <Nav.Link onClick={handleLoggingButton}  href="" > <Button  variant="success"> {loggedInUser.name ? "LogOut" : "Login"}</Button>
+    <Nav.Link onClick={handleLoggingButton}  href="" > <Button  variant="success"> {loggedInUser.name ? "Logout" : "Login"}</Button>
            
           </Nav.Link>
    
