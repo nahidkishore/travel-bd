@@ -17,15 +17,16 @@ import Contact from './components/Others/Contact';
 import Blog from './components/Others/Blog';
 import News from './components/Others/News';
 import Hotels from './components/Hotels/Hotels';
+import BookingHotel from './components/Hotels/BookingHotel';
 
 export const UserContext = createContext();
 
 function App(props) {
   const [loggedInUser,setLoggedInUser]=useState({});
+  
   return (
     <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
       <Router>
-   <h3>{loggedInUser.displayName}</h3>
   
         <Header></Header>
         <Switch>
@@ -44,10 +45,10 @@ function App(props) {
            
           </Route>
           <PrivateRoute path="/checkout">
-            <BookingCheckout></BookingCheckout>
+            <BookingHotel></BookingHotel>
 
           </PrivateRoute>
-          <Route  path="/hotelDetails/:placeId">
+          <Route exact path="/hotelDetails/:placeId">
             <Hotels></Hotels>
 
           </Route>

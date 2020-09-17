@@ -10,9 +10,11 @@ const Booking = () => {
       <Form>
       <Form.Group>
       <Form.Label>Origin</Form.Label>
-        <Form.Control type="home" placeholder="Dhaka" />
+        <Form.Control type="text" placeholder="Dhaka" />
         <Form.Label>Destination</Form.Label>
-        <Form.Control type="destination"  placeholder="Cox's Bazar" />
+        <Form.Control type="text"  placeholder="Cox's Bazar" />
+
+        
       </Form.Group>
       <Link to="/checkout"><Button  variant="primary" type="submit">Start Booking</Button></Link>
       
