@@ -6,7 +6,6 @@ import { initializeLoginFramework, handleGoogleSignIn, handleSignOut, handleFbSi
 import { Button, Container, Form, FormControl,} from 'react-bootstrap';
 
 
-
 function Login() {
   const [newUser, setNewUser] = useState(false);
   const [user, setUser] = useState({
@@ -92,13 +91,7 @@ function Login() {
   return (
     <div style={{textAlign: 'center'}}>
       
-      {
-        user.isSignedIn && <div>
-          <p>Welcome, {user.name}!</p>
-          <p>Your email: {user.email}</p>
-          <img src={user.photo} alt=""/>
-        </div>
-      }
+      
 
      {/*  <h1>Our own Authentication</h1> */}
       <Container>
@@ -123,42 +116,29 @@ function Login() {
 
           </Form>
           
-      <label htmlFor="newUser">Don't have an account? </label>  <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id=""/>
+      {/* <label htmlFor="newUser">Don't have an account? </label>  <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id=""/> */}
 
+      <p>{newUser ? 'Already have an account?' : "Don't have an account?"} <span style={{cursor:'pointer'}} onClick={() => setNewUser(!newUser)} className='text-success'>{ newUser ? 'Login' : 'Create an account'}</span></p>
 
 
           <p style={{color: 'red'}}>{user.error}</p>
       { user.success && <p style={{color: 'green'}}>User { newUser ? 'created' : 'Logged In'} successfully</p>}
-             <p style={{textAlign: 'center'}}>--------Or-----------</p>
+       <p style={{textAlign: 'center',textColor: 'green', weight: 'bold'}}>--------Or-----------</p>
+
           { user.isSignedIn ? <Button onClick={signOut}>Sign Out</Button> :
-        <Button onClick={googleSignIn}>Google Sign In</Button>
+        <Button onClick={googleSignIn}> Continue With Google Sign In</Button>
       }
-      <br/>
-      <Button variant="success"  onClick={fbSignIn}>Sign in using Facebook</Button>
+      <br/> <br/>
+      <Button variant="success"  onClick={fbSignIn}>Continue With Facebook Sign In</Button>
         </div>
       </Container>
-     
-    
-      {/* <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id=""/>
-      <label htmlFor="newUser">New User Sign up</label>
-      <form onSubmit={handleSubmit}>
-        {newUser && <input name="name" type="text" onBlur={handleBlur} placeholder="Your name"/>}
-        <br/>
-        <input type="text" name="email" onBlur={handleBlur} placeholder="Your Email address" required/>
-        <br/>
-        <input type="password" name="password" onBlur={handleBlur} placeholder="Your Password" required/>
-        <br/>
-        <input type="submit" value={newUser ? 'Sign up' : 'Sign in'}/>
-      </form>
-
-      <p style={{color: 'red'}}>{user.error}</p>
-      { user.success && <p style={{color: 'green'}}>User { newUser ? 'created' : 'Logged In'} successfully</p>}
-
-      { user.isSignedIn ? <button onClick={signOut}>Sign Out</button> :
-        <button onClick={googleSignIn}>Google Sign In</button>
-      }
-      <br/>
-      <button onClick={fbSignIn}>Sign in using Facebook</button> */}
+      {
+        user.isSignedIn && <div>
+          <p>Welcome, {user.name}!</p>
+          <p>Your email: {user.email}</p>
+          <img src={user.photo} alt=""/>
+        </div>
+      } 
     </div>
   );
 }

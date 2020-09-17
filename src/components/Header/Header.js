@@ -21,10 +21,10 @@ const Header = () => {
       <Nav.Link href=""><Link to="/blog">Blog</Link></Nav.Link>
       <Nav.Link href=""><Link to="/contact">Contact</Link></Nav.Link>
       
-      <Button style={{color: 'yellow'}}>Welcome to {loggedInUser.displayName}!!</Button>
+  <p style={{color: 'yellow'}}> {loggedInUser.displayName}</p>
       
     </Nav>
-    <Link to="/login"><Button>Login</Button></Link>
+    {/* <Link to="/login"><Button>Login</Button></Link> */}
     <Button onClick={()=> setLoggedInUser({})} variant="warning">Sign Out</Button>
     </Navbar.Collapse>
     
