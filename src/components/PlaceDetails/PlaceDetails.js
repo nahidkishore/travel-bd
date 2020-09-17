@@ -1,22 +1,58 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Button, Col, Form, FormControl, InputGroup, Row } from 'react-bootstrap';
+import { Link, useParams } from 'react-router-dom';
 import fakeData from '../FakeData/fakeData';
-import Booking from '../Place/Booking';
 
 
 const PlaceDetails = () => {
   const {placeId}=useParams();
   const [places,setPlaces]=useState({})
+  const {title, details,id}=places;
 
   useEffect(() =>{
-    const selectedPlace =fakeData.find(place => place.id ===placeId)
+    const selectedPlace =fakeData.find(place => place.id == placeId)
     setPlaces(selectedPlace)
   },[placeId])
   
-  
+const bookStyle={
+  marginTop:'40px',
+  textAlign: 'justify'
+}
 return (
-  <div>
-<Booking></Booking>
+  <div style={bookStyle} className="container">
+    <Row>
+      <Col  xs={6} md={4}>
+      
+        <h1>{title}</h1>
+       <p>{details}</p>
+     
+  
+      </Col>
+      <Col xs={12} md={8}>
+      
+      <Form>
+      <InputGroup className="mb-3">
+    <InputGroup.Prepend>
+       <InputGroup.Text>Origin</InputGroup.Text>
+    </InputGroup.Prepend>
+    <FormControl  placeholder="Dhaka" />
+    </InputGroup>
+    <InputGroup  className="mb-3">
+    <InputGroup.Prepend>
+    <InputGroup.Text>Destination</InputGroup.Text>
+    
+    </InputGroup.Prepend>
+    <FormControl  aria-label="Destination" value={title} required />
+  
+    </InputGroup>
+    <Link to={"/checkout"}><Button  variant="success" type="submit">Start Booking</Button></Link>
+      
+      </Form>
+
+
+      </Col>
+    </Row>
+
 
 
 

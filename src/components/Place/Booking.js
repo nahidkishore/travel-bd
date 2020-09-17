@@ -5,11 +5,8 @@ import { Link } from 'react-router-dom';
 const Booking = () => {
 
   return (
-    <div className="d-flex justify-content-around">
-      <div className="col-md-6">
-<h3>Details</h3>
-      </div>
-      <div className="col-md-4">
+    
+      <div>
       <Form>
       <Form.Group>
       <Form.Label>Origin</Form.Label>
@@ -23,7 +20,7 @@ const Booking = () => {
       </div>
      
  
-    </div>
+    
   );
 };
 

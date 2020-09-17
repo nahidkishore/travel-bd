@@ -16,6 +16,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Contact from './components/Others/Contact';
 import Blog from './components/Others/Blog';
 import News from './components/Others/News';
+import Hotels from './components/Hotels/Hotels';
 
 export const UserContext = createContext();
 
@@ -35,7 +36,7 @@ function App(props) {
           <Home></Home>
           </Route>
           <Route path="/destination">
-     <PlaceDetails></PlaceDetails>
+         <PlaceDetails></PlaceDetails>
           </Route>
           <Route path="/booking/:placeId">
              <PlaceDetails></PlaceDetails>
@@ -45,6 +46,10 @@ function App(props) {
             <BookingCheckout></BookingCheckout>
 
           </PrivateRoute>
+          <Route  path="/hotelDetails/:placeId">
+            <Hotels></Hotels>
+
+          </Route>
           <Route path="/contact">
             <Contact></Contact>
           </Route>

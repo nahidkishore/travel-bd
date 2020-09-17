@@ -9,6 +9,8 @@ const Header = () => {
     <div>
       <Navbar bg="dark" variant="dark">
     <Navbar.Brand href=""><Link to="/home">Navbar</Link></Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
     <Form inline>
       <FormControl type="text" placeholder="Search your Destination..." className="mr-sm-2" />
      
@@ -24,6 +26,7 @@ const Header = () => {
     </Nav>
     <Link to="/login"><Button>Login</Button></Link>
     <Button onClick={()=> setLoggedInUser({})} variant="warning">Sign Out</Button>
+    </Navbar.Collapse>
     
   
   </Navbar>
