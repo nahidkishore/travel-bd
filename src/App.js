@@ -18,14 +18,20 @@ import Blog from './components/Others/Blog';
 import News from './components/Others/News';
 import Hotels from './components/Hotels/Hotels';
 import BookingHotel from './components/Hotels/BookingHotel';
+import Place from './components/Place/Place';
 
 export const UserContext = createContext();
+export const HotelContext = createContext();
 
-function App(props) {
+function App() {
   const [loggedInUser,setLoggedInUser]=useState({});
+  const [hotel,setHotel] = useState({});
   
   return (
+  
     <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
+   <HotelContext.Provider value={[hotel,setHotel]}>
+ 
       <Router>
   
         <Header></Header>
@@ -72,8 +78,13 @@ function App(props) {
          
         </Switch>
       </Router>
-      
+          
+   </HotelContext.Provider>
     </UserContext.Provider>
+
+ 
+   
+   
   );
 }
 

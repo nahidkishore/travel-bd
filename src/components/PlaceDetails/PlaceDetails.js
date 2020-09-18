@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Button, Col, Form, FormControl, InputGroup, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
+import { HotelContext} from '../../App';
 import fakeData from '../FakeData/fakeData';
 
 
 const PlaceDetails = () => {
   const {placeId}=useParams();
+  const [hotel,setHotel]=useContext(HotelContext);
+   setHotel(placeId);
+
+
   const [places,setPlaces]=useState({})
   const {title, details,id}=places;
 
