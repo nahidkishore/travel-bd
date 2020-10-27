@@ -1,28 +1,24 @@
-import React from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Booking = () => {
-
   return (
-    
-      <div>
+    <div>
       <Form>
-      <Form.Group>
-      <Form.Label>Origin</Form.Label>
-        <Form.Control type="text" placeholder="Dhaka" />
-        <Form.Label>Destination</Form.Label>
-        <Form.Control type="text"  placeholder="Cox's Bazar" />
-
-        
-      </Form.Group>
-      <Link to="/checkout"><Button  variant="primary" type="submit">Start Booking</Button></Link>
-      
+        <Form.Group>
+          <Form.Label>Origin</Form.Label>
+          <Form.Control type="text" placeholder="Dhaka" />
+          <Form.Label>Destination</Form.Label>
+          <Form.Control type="text" placeholder="Cox's Bazar" />
+        </Form.Group>
+        <Link to="/checkout">
+          <Button variant="primary" type="submit">
+            Start Booking
+          </Button>
+        </Link>
       </Form>
-      </div>
-     
- 
-    
+    </div>
   );
 };
 

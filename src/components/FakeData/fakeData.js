@@ -7,6 +7,8 @@ const fakeData=[
     imageUrl:'https://iili.io/2ni7Lb.png',
     map:'https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3890205.7673232267!2d89.95409521206258!3d23.62167563909016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d23.774608999999998!2d90.42194549999999!4m5!1s0x3752feb9eb8c7313%3A0xf1d07a0cc84f174c!2ssajek%20valley%20google%20map!3m2!1d23.4055511!2d92.2786261!5e0!3m2!1sen!2sbd!4v1600332011782!5m2!1sen!2sbd',
     price:119,
+    lat:23.405555,
+    lang:92.278738,
     hotel:[
       {
         name:'Sajek Resort',
@@ -37,6 +39,8 @@ const fakeData=[
     imageUrl:'https://iili.io/2ngJG2.png',
     map:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58175.13504705564!2d91.69002475043726!3d24.3135206844528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37517a7a9ac91745%3A0x50f827893a88c955!2sSreemangal!5e0!3m2!1sen!2sbd!4v1600333015933!5m2!1sen!2sbd',
     price:80,
+    lat:24.305620,
+    lang:91.726852,
     hotel:[
       {
         name:'Sreemangal Resort',
@@ -67,6 +71,8 @@ const fakeData=[
     imageUrl:'https://iili.io/2ngHCl.png',
     map:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d946898.4168831704!2d88.72650536235705!3d22.01813251593307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a004caac2c7b315%3A0x4716abcfbb16c93c!2sSundarbans!5e0!3m2!1sen!2sbd!4v1600333069687!5m2!1sen!2sbd',
     price:140,
+    lat:22.004448,
+    lang:89.025955,
     hotel:[
       {
         name:'Sundarban Resort',
