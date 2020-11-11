@@ -1,0 +1,30 @@
+.place-card {
+  min-height: 200px;
+  width: 350px;
+  margin: 20px 15px;
+  color: #f7fff7;
+  background-color: #343a40;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 10px 10px 30px #aca6a6;
+}
+
+.card-title {
+  margin-bottom: lace;
+}
+.place-card img {
+  height: 300px;
+}
+
+.place-card-footer {
+  border: none;
+  background-color: #343a40;
+  margin-bottom: 5px;
+}
+
+.place-card img:hover {
+  opacity: 0.8;
+  border-color: #1ad5ee;
+  transition: all 0.5s ease-out;
+}

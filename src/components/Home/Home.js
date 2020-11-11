@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import fakeData from '../FakeData/fakeData';
-import Place from '../Place/Place';
+import React, { useState } from "react";
+import fakeData from "../FakeData/fakeData";
+import Place from "../Place/Place";
 const Home = () => {
-  const [places,setPlaces]=useState(fakeData);
+  const [places, setPlaces] = useState(fakeData);
   return (
-    <div >
- <div className="row d-flex justify-content-between mx-auto">
-      {
-        places.map(place => <Place  place={place} key={place.id}></Place> )
-      }
-      
-    </div>
-    </div>
-   
+    <section>
+      <div className="d-flex justify-content-center">
+        <div className="row w-75 mt-5">
+          {places.map((place) => (
+            <Place place={place} key={place.id}></Place>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,7 +1,6 @@
 import React, { createContext, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import PlaceDetails from "./components/PlaceDetails/PlaceDetails";
 import Login from "./components/Login/Login";
@@ -14,6 +13,9 @@ import News from "./components/Others/News";
 import Hotels from "./components/Hotels/Hotels";
 import BookingHotel from "./components/Hotels/BookingHotel";
 import Place from "./components/Place/Place";
+import { Navbar } from "react-bootstrap";
+import Header from "./components/Header/Header";
+import HomeMain from "./components/Home/HomeMain/HomeMain";
 
 export const UserContext = createContext();
 export const HotelContext = createContext();
@@ -26,13 +28,13 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <HotelContext.Provider value={[hotel, setHotel]}>
         <Router>
-          <Header></Header>
           <Switch>
+          
             <Route path="/home">
-              <Home></Home>
+              <HomeMain></HomeMain>
             </Route>
             <Route exact path="/">
-              <Home></Home>
+             <HomeMain></HomeMain>
             </Route>
             <Route path="/destination">
               <PlaceDetails></PlaceDetails>
