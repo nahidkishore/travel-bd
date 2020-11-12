@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const Blog = () => {
   return (
-    <div>
-      <h2>Blog post</h2>
-    </div>
+    <section>
+      <div className="container d-flex justify-content-center align-items-center mt-5">
+        <div>
+          <h2>Blog post coming soon....</h2>
+        </div>
+      </div>
+    </section>
   );
 };
 

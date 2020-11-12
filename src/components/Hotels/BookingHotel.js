@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { HotelContext } from "../../App";
 import fakeData from "../FakeData/fakeData";
 
@@ -15,23 +16,40 @@ const BookingHotel = () => {
 
   const [hotels, setHotels] = useState(fakeHotels);
   console.log(hotels);
+  const [origin, setOrigin] = useState("");
 
+  const [destination, setDestination] = useState("");
   return (
-    <div>
-      <div className="row">
-        <div className="col-6 col-md-6">
-          <h4 style={{ textAlign: "center" }}>
-            Stay in <h1 style={{ color: "green" }}>{placeArrays[0].title}</h1>{" "}
-          </h4>
-          {hotels.map((hotel) => (
-            <HotelDetails hotel={hotel}></HotelDetails>
-          ))}
-        </div>
-        <div className="col-6 col-md-6">
-          <Map></Map>
+    <section>
+      <div className="container mt-5">
+      
+        <div className="row">
+          <div className="col-12 col-md-6 col-lg-5">
+            <h4 style={{ textAlign: "center" }}>
+              Stay in <h1 style={{ color: "green" }}>{placeArrays[0].title}</h1>
+            </h4>
+            {hotels.map((hotel) => (
+              <HotelDetails hotel={hotel}></HotelDetails>
+            ))}
+          </div>
+          <div className="col-2 col-md-6 col-lg-7">
+            <div className="my-5">
+              <input
+                type="text"
+                placeholder="starting from "
+                onBlur={(e) => setOrigin(e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="Destination "
+                onBlur={(e) => setDestination(e.target.value)}
+              />
+            </div>
+            <Map origin={origin} destination={destination}></Map>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

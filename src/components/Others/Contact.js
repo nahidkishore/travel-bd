@@ -1,42 +1,55 @@
 import React from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+
 
 const Contact = () => {
   return (
-    <div className="container">
-      
-      <Container>
-        <Row>
-          <Col md={12}><h2 style={{color: 'orange'}}>Location Information</h2></Col> 
-          <Col md={12} sm={4} >
-  
-            <div style={{textAlign: 'center'}}>
-            <p>Rampura, Dhaka <br/></p>
-            <p>Bangladesh</p>
-            
-            </div>
-           
-          </Col>
-        </Row>
-        <Form>
-        <Form.Group>
-      <Form.Label>User Name</Form.Label>
-        <Form.Control type="name" placeholder="User Name" />
-        <Form.Label>Phone number </Form.Label>
-        <Form.Control type="phone"  placeholder="Enter Your Number" />
-        <Form.Label>Email </Form.Label>
-        <Form.Control type="email"  placeholder="Enter Your Email" />
-        <Form.Label>Your Feedback </Form.Label>
-        <Form.Control as="textarea" row="12"  placeholder="text area" />
-        
-      </Form.Group>
-      <Button variant="primary" type="submit">
-    Submit
-  </Button>
-        </Form>
-      </Container>
-      
-    </div>
+    <section>
+      <div className="container d-flex align-items-center py-5 ">
+        <div className="row">
+          <div className="col-md-5">
+            <h1>Let Us handle Your Booking, Professionally</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis culpa, necessitatibus quia ad quae ea!
+            </p>
+          </div>
+          <div className="col-md-5 offset-md-1 mx-auto">
+            <form action="">
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Your  email Address "
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Your name  "
+                />
+              </div>
+              <div className="form-group">
+                <textarea
+                  name=""
+                  className="form-control"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Message "
+                ></textarea>
+              </div>
+              <div className="form-group text-center">
+                <button type="button" className="button">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </section>
   );
 };
 

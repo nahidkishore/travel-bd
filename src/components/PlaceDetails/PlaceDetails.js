@@ -1,16 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import {
-  Button,
-  Col,
-  Form,
-  FormControl,
-  InputGroup,
-  Row,
-} from "react-bootstrap";
-import { Link, useHistory, useParams } from "react-router-dom";
+
+import { useHistory, useParams } from "react-router-dom";
 import { HotelContext } from "../../App";
 import fakeData from "../FakeData/fakeData";
-import Header from "../Header/Header";
 
 const PlaceDetails = () => {
   const { placeId } = useParams();
@@ -28,7 +20,6 @@ const PlaceDetails = () => {
   const history = useHistory();
   return (
     <section>
-      <Header></Header>
       <div className="container ">
         <div className="row mt-5">
           <div className="col-md-5">

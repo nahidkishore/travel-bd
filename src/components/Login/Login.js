@@ -91,13 +91,13 @@ function Login() {
 
   return (
     <section>
-      <div className="container">
+      <div className="container  d-flex align-items-center justify-content-center">
         <div
           className=" d-flex flex-column justify-content-center align-items-center mt-5"
           id="header-id"
         >
           <form onSubmit={handleSubmit}>
-            <h1 style={{ color: "greenyellow" }} className="text-center mt-5">
+            <h1 style={{ color: "orange" }} className="text-center mt-5">
               {newUser ? "Create an Account" : "User Login"}
             </h1>
             <div className="row d-flex justify-content-center align-items-center">
@@ -147,7 +147,7 @@ function Login() {
                 </div>
               )}
               <div className="form-group col-12 col-md-8">
-                <button className="btn btn-success btn-sm" type="submit">
+                <button className="button" type="submit">
                   {newUser ? "Create an Account" : "Login"}
                 </button>
               </div>
@@ -155,13 +155,13 @@ function Login() {
           </form>
 
           <p>
-            {newUser ? "Already have an account?" : "Don't have an account?"}{" "}
+            {newUser ? "Already have an account?" : "Don't have an account?"}
             <span
               style={{ cursor: "pointer" }}
               onClick={() => setNewUser(!newUser)}
-              className="text-success"
+              className="text-warning"
             >
-              {newUser ? "Login" : "Create an account"}
+              {newUser ? "Login" : " Create an account"}
             </span>
           </p>
 

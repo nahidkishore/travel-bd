@@ -1,21 +1,17 @@
 import React, { createContext, useState } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/Home/Home";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import PlaceDetails from "./components/PlaceDetails/PlaceDetails";
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
-import BookingCheckout from "./components/BookingCheckout/BookingCheckout";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Contact from "./components/Others/Contact";
 import Blog from "./components/Others/Blog";
 import News from "./components/Others/News";
 import Hotels from "./components/Hotels/Hotels";
 import BookingHotel from "./components/Hotels/BookingHotel";
-import Place from "./components/Place/Place";
-import { Navbar } from "react-bootstrap";
-import Header from "./components/Header/Header";
 import HomeMain from "./components/Home/HomeMain/HomeMain";
+import Navbar from "./components/Home/Navbar/Navbar";
 
 export const UserContext = createContext();
 export const HotelContext = createContext();
@@ -28,6 +24,7 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <HotelContext.Provider value={[hotel, setHotel]}>
         <Router>
+        <Navbar></Navbar> 
           <Switch>
           
             <Route path="/home">
