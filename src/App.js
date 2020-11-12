@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PlaceDetails from "./components/PlaceDetails/PlaceDetails";
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
@@ -24,14 +24,13 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <HotelContext.Provider value={[hotel, setHotel]}>
         <Router>
-        <Navbar></Navbar> 
+          <Navbar></Navbar>
           <Switch>
-          
             <Route path="/home">
               <HomeMain></HomeMain>
             </Route>
             <Route exact path="/">
-             <HomeMain></HomeMain>
+              <HomeMain></HomeMain>
             </Route>
             <Route path="/destination">
               <PlaceDetails></PlaceDetails>
